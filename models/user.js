@@ -1,10 +1,12 @@
 'use strict';
 
 var db = require('./database');
-var Sequelize = require('sequelize');
+var S = require('sequelize');
 
-var User = db.define('user', {
-  name: Sequelize.STRING
-});
+class User extends S.Model {}
+
+User.init({
+  name: S.STRING
+}, { sequelize: db, modelName: 'user' });
 
 module.exports = User;
