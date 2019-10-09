@@ -1,19 +1,16 @@
-'use strict';
+"use strict";
 
-var db = require('./database');
-var S = require('sequelize');
+const sequelize = require("./database");
+const S = require("sequelize");
 
 // Asegurate que tu Postgres este corriendo!
 
-var User = require('./user');
+const User = require("./user");
 
 //---------VVVV---------  tu código aquí abajo  ---------VVV----------
 
 class Article extends S.Model {}
-Article.init({
-  
-  
-}, { sequelize: db, modelName: 'article' });
+Article.init({}, { sequelize, modelName: "article" });
 //---------^^^---------  tu código aquí arriba  ---------^^^----------
 
 module.exports = Article;
