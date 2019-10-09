@@ -306,7 +306,8 @@ describe("El modelo `Article`", function() {
      */
     xit("es un getter customizado", function() {
       // tags deberían tener un `defaultValue` que es un arreglo vacío.
-      expect(Article.attributes.tags.defaultValue).to.deep.equal([]);
+      // console.dir(Article);
+      expect(Article.tableAttributes.tags.defaultValue).to.deep.equal([]);
 
       // funcionalidad principal de tags
       return Article.create({

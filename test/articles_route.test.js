@@ -300,7 +300,7 @@ describe("Articles Route:", function() {
           title: "Awesome PUT-Updated Article"
         })
         .then(function() {
-          return Article.findById(article.id);
+          return Article.findByPk(article.id);
         })
         .then(function(foundArticle) {
           expect(foundArticle).to.exist; // eslint-disable-line no-unused-expressions
